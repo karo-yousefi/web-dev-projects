@@ -17,7 +17,7 @@
 
 ![random-qupte](https://github.com/karo-yousefi/Web-Dev-Projects/blob/main/media/random-quote-0.png) 
 
-5. Infinity Scroll
+3. Infinity Scroll
 
 
 + More projects will be added...
