@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*
+{
+    margin: 0px auto;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans";
+}
+
+.night{
+    display: inline;
+    font-size: 3rem;
+    color: #0671eb;
+    position: absolute;
+    top: 1.5vh;
+    left: 1vw;
+    width: 1em;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.night:hover{
+    cursor: pointer;
+    color: #6cbdf3;
+}
+
+
+.night-night{
+    color: #ffffff;
+}
+
+.night-night:hover{
+    color: #0a83d4;
+}
+
+
+.container{
+    height: 100vh;
+    margin: 0px auto;
+    display: flex;
+    margin-top: -100px;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.counter{
+    font-size: 10rem;
+    color: #0671eb;
+    cursor: default;
+    font-weight: 100;
+}
+
+
+.fa-caret-up, .fa-caret-down{
+    font-size: 3rem;
+    padding: .5em;
+    margin: 20px 10px;
+    color: #0671eb;
+    border: 1px solid #0671eb;
+    border-radius: 10px;
+    transition: 0.2s;
+    box-shadow: 1px 1px black;
+}
+
+.btn-reset{
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    padding: 0.2em 1.44em;
+    color: #0671eb;
+    border: 1px solid #0671eb;
+    border-radius: 7px;
+    box-shadow: 1px 1px black;
+    transition: 0.18s;
+}
+
+.fa-caret-up:hover, .fa-caret-down:hover, .btn-reset:hover{
+    background-color: #e2e2e2;
+    scale: 1.05;
+    color: #0a83d4;
+    border-color: #0a83d4;
+    box-shadow: 3px 3px black;
+    cursor: pointer;
+}
+
+.fa-caret-up:active, .fa-caret-down:active, .btn-reset:active{
+    background-color: #b1b0b0;
+    scale: 1.05;
+    color: #006eb8;
+    border-color: #006eb8;
+    box-shadow: 1px 1px black;
+}
+
