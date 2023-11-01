@@ -11,9 +11,13 @@
 
 1. Simple Counter
 
+[simple-counter](https://github.com/karo-yousefi/Web-Dev-Projects/blob/main/media/simple-counter-0.png)
+
 2. Random Quote
 
-3. Infinity Scroll
+[random-qupte](https://github.com/karo-yousefi/Web-Dev-Projects/blob/main/media/random-quote-0.png) 
+
+5. Infinity Scroll
 
 
 + More projects will be added...
