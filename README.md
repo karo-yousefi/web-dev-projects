@@ -1,15 +1,15 @@
 # Simple web-based projects
 
-+ This repo contains some of my basic and simple projcets. I've done these project to learn more about front end web dev.
++ This repo contains some of my basic and simple projects. I've done these projects to learn more about front-end web dev.
 
-+ Feel free to fork the projects and work on them or rebuild it if you are learning web dev.
++ Feel free to fork the projects and work on them or rebuild them if you are learning web dev.
 
-+ All the appps are documented.
++ All the apps are documented.
 
 
 # Projects List
 
-1. Simple Coounter
+1. Simple Counter
 
 2. Random Quote
 
