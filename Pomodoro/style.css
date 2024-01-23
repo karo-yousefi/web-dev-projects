@@ -1,0 +1,21 @@
+
+
+*{
+    box-sizing: border-box;    
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px auto;
+    background-color: #11111b;
+}
+
+.test{
+    display: inline;
+    padding: 20px;
+    background-color: white;
+    transition: 0.3s;
+    position: absolute;
+    top: 10px;
+    left: 200px;
+}
