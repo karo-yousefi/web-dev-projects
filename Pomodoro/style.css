@@ -1,21 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 *{
-    box-sizing: border-box;    
+    box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: "IBM Plex Sans", sans-serif;
+    margin: 0px auto;
 }
 
 body{
-    margin: 0px auto;
-    background-color: #11111b;
+    background-color: #ff9074;
 }
 
-.test{
-    display: inline;
-    padding: 20px;
-    background-color: white;
-    transition: 0.3s;
-    position: absolute;
-    top: 10px;
-    left: 200px;
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.dropdown{
+    display: flex;
+    gap: 50px;
+    padding: 70px 150px;
+}
+
+.dropdown select{
+    width: 190px;
+    text-align: center;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.dropdown select:hover{
+    background-color: #ffffffc0;
+}
+
+.timer-setting-container{
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+.up, .down{
+    font-size: 2rem;
+    padding: 0.4em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 3px #00000083;
+    transition: 0.15s;
+}
+
+.up:hover, .down:hover{
+    box-shadow: none;
+    transform: translateY(3px);
+}
+
+.up:active, .down.down:active{
+    background-color: #0cf;
+}
+
+.timer-container{
+    background-color: #ffffff31;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    min-width: 400px;
+    padding: 30px;
+}
+
+.timer-container p{
+    font-size: 6rem;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 8px;
+}
+
+.button-contaniner{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    gap: 30px;
+    width: 30%;
+}
+
+.button{
+    font-size: 2.2rem;
+    padding: 0.3em 1.8em;
+    border-radius: 0.4em;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px #00000083;
+    transition: 0.15s;
+    color: #555555;
+}
+
+.button:hover{
+    box-shadow: none;
+    transform: translateY(4px);
+    color: #000;
+}
+
+.start:active{
+    background-color: #3ff33f;
+}
+
+.reset:active{
+    background-color: #fa4242;
+}
+
+.section-container{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.section-container i{
+    color: #fff;
+    margin-top: 2px;
+    font-size: 1.9rem;
+}
+
+.pomodoro, .rest, .long-rest{
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px #00000083;
+}
+
+.pomodoro:hover, .rest:hover, .long-rest:hover{
+    transform: translateY(2px);
 }
