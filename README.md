@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Simple web-based projects
 
 + This repo contains some of my basic and simple projects. I've done these projects to learn more about front-end web dev.
@@ -74,4 +73,3 @@
 5. ?
 
 + More projects will be added...
->>>>>>> d7ab63950cb93ed4328715288fb7f90702da6d3c
