@@ -19,17 +19,17 @@ sesstionList = [];
 function upOneMin(){
     if(sectionSelected===0){
         pomodoroTime++;
-        update(pomodoroTime);
+        update(pomodoroTime*60);
     }
 
     else if (sectionSelected===1){
         restTime++;
-        update(restTime);
+        update(restTime*60);
     }
 
     else{
         longRestTime++;
-        update(longRestTime);
+        update(longRestTime*60);
     }
 }
 
@@ -37,33 +37,39 @@ function downOneMin(){
     if(sectionSelected===0){
         if (pomodoroTime>0){
             pomodoroTime--;
-            update(pomodoroTime);
+            update(pomodoroTime*60);
         }
     }
 
     else if (sectionSelected===1){
         if(restTime>0){
         restTime--;
-        update(restTime);
+        update(restTime*60);
         }
     }
 
     else{
         if(longRestTime>0){
             longRestTime--;
-        update(longRestTime);
+        update(longRestTime*60);
         }
     }
 }
 
 
 function update(time){
+    min = Math.floor(time/60);
+    sec = time - min*60;
 
-    if(time<10){
-        time = "0" + time.toString();
+    if(min<10){
+        min = "0" + min.toString();
+    }
+    
+    if(sec<10){
+        sec = "0" + sec.toString();
     }
 
-    timerText.innerHTML = time + ":00";
+    timerText.innerHTML = min + ":" +sec;
 }
 
 
@@ -100,17 +106,38 @@ function start(){
             sesstionList.push(1);
         }
     }
+
+    for(let i = 0; i < sesstionList.length; i++){
+        console.log(i);
+        if(sesstionList[i] === 0){
+            timeCountDown(pomodoroTime);
+        }
+        else if(sesstionList[i] === 1){
+            timeCountDown(restTime);
+        }
+        else{
+            timeCountDown(longRestTime);
+        }
+    }
 }
 
+
+function timeCountDown(time){
+   timeInSec = time * 60;
+    const countdownInterval = setInterval(function(){
+        timeInSec--;
+        update(timeInSec)
+    }, 1000)
+}
 
 function sectionDone(section){
     if(section===0){
         pomodoroSection.style.backgroundColor = "#3ff33f";
-        timeCountDown(restTime);
+        // timeCountDown(restTime);
     }
     else if(section===1){
         restSection.style.backgroundColor = "#3ff33f";
-        timeCountDown(longRestTime);
+        // timeCountDown(longRestTime);
     }
     else if(section===2){
         longRestSection.style.backgroundColor = "#3ff33f";
@@ -120,15 +147,15 @@ function sectionDone(section){
 
 pomodoroSection.addEventListener("click", () => {
         sectionSelected = 0;
-        update(pomodoroTime);
+        update(pomodoroTime*60);
 })
 restSection.addEventListener("click", () => {
     sectionSelected = 1;
-    update(restTime);
+    update(restTime*60);
 })
 longRestSection.addEventListener("click", () => {
     sectionSelected = 2;
-    update(longRestTime)
+    update(longRestTime*60)
 })
 upButton.addEventListener("click", upOneMin);
 downButton.addEventListener("click", downOneMin);
