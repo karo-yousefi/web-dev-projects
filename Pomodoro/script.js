@@ -14,6 +14,7 @@ let restTime = 0;
 let longRestTime = 0;
 let sectionSelected = 0; // 0: pomodoro  1: rest  2: long rest
 sesstionList = [];
+let finished = false;
 
 
 function upOneMin(){
@@ -111,6 +112,7 @@ function start(){
         console.log(i);
         if(sesstionList[i] === 0){
             timeCountDown(pomodoroTime);
+            // Needs delay for stating the next scrion
         }
         else if(sesstionList[i] === 1){
             timeCountDown(restTime);
@@ -124,9 +126,13 @@ function start(){
 
 function timeCountDown(time){
    timeInSec = time * 60;
+   finished = false;
     const countdownInterval = setInterval(function(){
         timeInSec--;
         update(timeInSec)
+        if(timeInSec === 0){
+            finished = true;
+        }
     }, 1000)
 }
 
