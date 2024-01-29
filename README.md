@@ -9,28 +9,38 @@
 
 # Projects List
 
-1. Simple Counter
+1. Simple counter
 
-![simple-counter](https://github.com/karo-yousefi/Web-Dev-Projects/blob/main/media/simple-counter-0.png)
-
----
-
-2. Random Quote
-
-![random-qupte](https://github.com/karo-yousefi/Web-Dev-Projects/blob/main/media/random-quote-0.png) 
+![simple-counter](https://github.com/karo-yousefi/Web-Dev-Projects/blob/main/media/Simple-Counter.png)
 
 ---
 
-3. Animated Navigation
+2. Random quote
 
-![2023-11-07 22_37_58-Movies   TV](https://github.com/karo-yousefi/Web-Dev-Projects/assets/88065530/1c9a578a-5a0e-439e-9ae3-57ba9bd8d370)
-
----
-
-4. Music Player --> Musics from [LHSchiptunes](https://www.youtube.com/@LHSchiptunes).
+![random-qupte](https://github.com/karo-yousefi/Web-Dev-Projects/blob/main/media/Random-Quote.png) 
 
 ---
 
-5. ?
+3. Animated navigation
+
+![animnated-navigation](https://github.com/karo-yousefi/Web-Dev-Projects/blob/main/media/Animated-Navigation.png)
+
+---
+
+4. Music player --> Musics from [LHSchiptunes](https://www.youtube.com/@LHSchiptunes).
+
+![music-player](https://github.com/karo-yousefi/Web-Dev-Projects/blob/main/media/Music-Player.png) 
+
+---
+
+5. Homepage: A nice looking wavey home page
+
+![homepage1](https://github.com/karo-yousefi/Web-Dev-Projects/blob/main/media/homepage1.png) 
+
+---
+
+6. ?
+
+---
 
 + More projects will be added...
