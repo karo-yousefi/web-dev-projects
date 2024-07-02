@@ -49,8 +49,14 @@ Learned more SVGs and divs to create spacers for a home page
 
 ---
 
-6. ?
+6. Dark Moded
+
+![Dark-Mode](https://github.com/karo-yousefi/Web-Dev-Projects/blob/main/media/Dark-Mode.png)
+
 
 ---
 
+7. ?
+
+---
 + More projects will be added...
