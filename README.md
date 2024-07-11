@@ -58,7 +58,16 @@ Learned more SVGs and divs to create spacers for a home page
 
 ---
 
-7. ?
+7. Rock Paper Scissors Game
+
+![rock-paper-scissors]()
+
+In this project I used what I've learned about async operations in JS. This makes the computer wait for the user and the user wait for the computer. 
 
 ---
+
+8. ?
+
+---
+
 + More projects will be added...
