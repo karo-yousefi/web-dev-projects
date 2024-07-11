@@ -1,13 +1,14 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 *{
     box-sizing: border-box;
     margin: 0px auto;
     padding: 0px;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 body{
-    background-color: #a0a0a0;
+    background-color: #cfcfcf;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +17,7 @@ body{
 
 .options{
     display: flex;
-    gap: 50px;
+    gap: 100px;
     margin-top: 20px;
 }
 
@@ -51,31 +52,56 @@ body{
     scale: 1;
 }
 
+.button-container{
+    margin-top: 30px;
+}
+
+.reset-button{
+    font-size: 2.5rem;
+    font-weight: 900;
+    padding: 0.1em 0.6em;
+    background-color: #a7a7a7;
+    border: 2px solid  #a7a7a7;
+    border-radius: 10px;
+    box-shadow: 0px 3px #000;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.reset-button:hover{
+    background-color: #F6C958;
+    box-shadow: none;
+    transform: translateY(3px);
+    border: 2px solid  #000;
+}
+
 .log{
     display: flex;
     flex-direction: row;
-    width: 40vw;
+    width: 50vw;
     margin-top: 50px;
     justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 .log *{
     user-select: none;
+    min-width: 200px;
+    margin: 0px;
 }
 
 .log h1{
-    margin: 40px;
+    text-align: center;
+    font-size: 3rem;
 }
 
 .log p{
     text-align: center;
-    font-size: 3rem;
-}
-/* 
-.user-log{
-    border: 1px solid lime;
+    font-size: 4rem;
+    margin-top: 20px;
 }
 
-.computer-log{
-    border: 1px solid blue;
-} */
+.result-log  p{
+    font-size: 4.4rem;
+}

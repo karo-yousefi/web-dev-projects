@@ -1,18 +1,20 @@
 const optionRock = document.querySelector(".option-rock");
 const optionPaper = document.querySelector(".option-paper");
 const optionScissors = document.querySelector(".option-scissors");
+const userTitle = document.querySelector(".user-title");
+const computerTitle = document.querySelector(".computer-title");
+const userLog = document.querySelector(".user-log");
+const computerLog = document.querySelector(".computer-log");
+const resultLog  = document.querySelector(".result-log");
+const resetButton =  document.querySelector(".reset-button");
+
 
 const options = ["✊", "✋", "✌"];
-let turn; // 0 --> USER  1 --> COMPUTER
-const numberOfGames = 5;
-const result = []; // 0 --> USER  1 --> COMPUTER
+let numberOfGames;
+const result = []; // W --> User win  L --> User Lost  D --> Draw
 
 
-
-function determineTurn(){
-    turn = Math.floor(Math.random()*2);
-}
-
+numberOfGames = prompt("The number of games you wanna play?");
 
 function activateDeactivate(number){ // 0 --> deactive  1 --> activate
     if (number === 0){
@@ -27,9 +29,24 @@ function activateDeactivate(number){ // 0 --> deactive  1 --> activate
     }
 }
 
+function addLog(user, computer){
+    const newLogUser = document.createElement("p");
+    const newLogComputer = document.createElement("p");
+    const newLogResult = document.createElement("p");
+
+    newLogUser.innerHTML = user;
+    newLogComputer.innerHTML = computer;
+    newLogResult.innerHTML = result.at(-1);
+
+    userLog.appendChild(newLogUser);
+    computerLog.appendChild(newLogComputer);
+    resultLog.appendChild(newLogResult);
+}
 
 function userSelect(){
     activateDeactivate(1);
+    userTitle.style.color = "#ff0040";
+    computerTitle.style.color = "#000";
 
     return new Promise((resolve) => {
         optionRock.addEventListener("click", () => {
@@ -47,9 +64,11 @@ function userSelect(){
     })
 }
 
-
 function computerSelect(){
-    const waitTime = Math.random()*2000;
+    const waitTime = Math.random()*1800;
+
+    userTitle.style.color = "#000";
+    computerTitle.style.color = "#ff0040";
 
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -93,38 +112,23 @@ function determineWinner(user, computer){
 
 async function play(){
     if (result.length>=numberOfGames){
-        console.log("Finished!");
-        console.log(result);
+        userTitle.style.color = "#000";
+        computerTitle.style.color = "#000";
         return
     }
-    determineTurn();
-    if (turn === 0){
-        console.log("user");
-        const userChoice = await userSelect();
-        console.log(userChoice);
 
-        const computerChoice = await computerSelect();
-        console.log(computerChoice);
-        
-        result.push(determineWinner(userChoice, computerChoice));
-        console.log(result);
+    const userChoice = await userSelect();
+    const computerChoice = await computerSelect();
 
-    }
-    else{
-        console.log("pc");
-        const computerChoice = await computerSelect();
-        console.log(computerChoice);
+    result.push(determineWinner(userChoice, computerChoice));
+    addLog(userChoice, computerChoice);
 
 
-        const userChoice = await userSelect();
-        console.log(userChoice);
-
-        result.push(determineWinner(userChoice, computerChoice));
-        console.log(result);
-    }
-
-    setTimeout(play, 1000);
+    play();
 }
 
+resetButton.addEventListener("click", () =>{
+    location.reload();
+})
 
 play();
